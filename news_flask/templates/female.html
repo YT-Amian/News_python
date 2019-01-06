@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>女人</title>
+</head>
+<body>
+<div class="list">
+    <div class="cc rowup">
+
+
+        {% for new in news %}
+        <a href={{ new.url }}>{{ new.title }}</a>
+        <br>
+        {% endfor %}
+    </div>
+
+</div>
+</body>
+</html>
+
+<style>
+    body {
+        width: 100%;
+        text-align: center;
+    }
+
+    @keyframes rowup {
+        0% {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+        100% {
+            -webkit-transform: translate3d(0, -307px, 0);
+            transform: translate3d(0, -307px, 0);
+        }
+    }
+
+    .list .rowup {
+        -webkit-animation: 10s rowup linear infinite normal;
+        animation: 10s rowup linear infinite normal;
+        position: relative;
+    }
+</style>

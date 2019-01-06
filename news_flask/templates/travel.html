@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旅游</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.min.css">
+</head>
+<body>
+
+<div class="container ">
+    <nav class="panel">
+
+
+        {% for new in all_new %}
+
+        <a href={{ new.url }} class="panel-block is-active">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+            {{ new.title }}
+        </a>
+
+        {% endfor %}
+    </nav>
+
+</div>
+
+</body>
+</html>
+
+<style>
+</style>

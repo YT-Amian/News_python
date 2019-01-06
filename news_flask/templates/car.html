@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>汽车</title>
+</head>
+<body>
+<div class="list">
+    <div class="cc rowup">
+        <!--
+        we use for loop to show the data
+        -->
+        {% for new in news %}
+        <a href={{ new.url }}>{{ new.title }}</a>
+        <br>
+        {% endfor %}
+    </div>
+
+</div>
+</body>
+</html>
+
+<style>
+    /*
+        put the text center
+     */
+    body{
+        width: 100%;
+        text-align: center;
+    }
+
+    /*
+        make the text roll
+     */
+    @keyframes rowup {
+        0% {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+        100% {
+            -webkit-transform: translate3d(0, -307px, 0);
+            transform: translate3d(0, -307px, 0);
+        }
+    }
+
+    .list .rowup {
+        -webkit-animation: 10s rowup linear infinite normal;
+        animation: 10s rowup linear infinite normal;
+        position: relative;
+    }
+</style>
